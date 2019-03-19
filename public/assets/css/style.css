@@ -32,8 +32,8 @@ body {
     background-color: rgb(241, 237, 237);
     width: 300px;
     border: 6px;
-    padding: 25px;
-    margin: 25px;
+    padding: 5px;
+    margin: 5px;
     margin-left: 150px;
   }
 
@@ -42,11 +42,11 @@ body {
 }
 
   #box2 {
-    background-color: rgb(141, 135, 135);
+    background-color: rgb(150, 147, 109);
     width: 300px;
     border: 6px;
-    padding: 25px;
-    margin: 25px;
+    padding: 5px;
+    margin: 5px;
     margin-left: 150px;
   }
 
