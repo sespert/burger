@@ -5,7 +5,7 @@ This is a restaurant app that lets users input the names of burgers they'd like 
 
 - The app follows an MVC design pattern. Uses Node and MySQL to query and route the data, and uses Handlebars to generate the HTML.
 
-![Home Page]()
+![Home Page](https://github.com/sespert/burger/blob/master/public/assets/img/BurgerAppScreen.png)
 
 ## Tech/Framed Used
 
