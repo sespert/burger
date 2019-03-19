@@ -1,0 +1,59 @@
+body {
+    text-align: center;
+    background-image: url("../img/purty_wood.png");
+  }
+  
+  #burgerInput{
+    width: 300px;
+    height: 75px;
+    margin: auto;
+  }
+
+  img {
+    width: 150px;
+    margin-bottom: 60px;
+  }
+
+  .alignm {
+    display: inline-block;
+    vertical-align: middle;
+    padding: 3px 5px;
+  }
+
+  .block:before {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+  }
+
+  #box1 {
+    font-weight: bold;
+    background-color: rgb(241, 237, 237);
+    width: 300px;
+    border: 6px;
+    padding: 25px;
+    margin: 25px;
+    margin-left: 150px;
+  }
+
+  .devourBurger{
+    float: right;
+}
+
+  #box2 {
+    background-color: rgb(141, 135, 135);
+    width: 300px;
+    border: 6px;
+    padding: 25px;
+    margin: 25px;
+    margin-left: 150px;
+  }
+
+  #footer {
+    background-color:black;
+    font-family: 'Georgia', Times, Times New Roman, serif; 
+    color: #ffffff;  
+    height: 50px;
+}
+  

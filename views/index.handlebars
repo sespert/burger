@@ -1,0 +1,80 @@
+  <h1>The Happy Burger</h1>
+  <img src="/assets/img/burger.jpg" alt="">
+
+	<div class="row">
+      <div class="col-lg">        
+           {{#each burgers}}
+            {{#unless devoured}}
+            <div class="block">
+              <p class="alignm" id="box1">{{this.id}}. {{this.burger_name}}</p>
+              <button data-burgerid="{{this.id}}" class="alignm" id="devourBurger">Devour it!</button>
+           </div>
+            {{/unless}}
+          {{/each}}        
+      </div>
+      <div class="col-sm">
+          {{#each burgers}}
+			    {{#if devoured}}
+            <div id="box2">{{this.id}}. {{this.burger_name}} </div>  
+          {{/if}}
+			  {{/each}}      
+      </div>
+  </div>
+
+		<div class="form-group">
+		    <textarea class="form-control" id="burgerInput" rows="3"></textarea>
+		    <br>
+		    <button type="submit" id="addBurger">Add Burger</button>
+		    <br>
+		    <br>
+		    <label for="burgerInput">Enter a burger you want to eat and click button.</label>
+		</div>
+    
+<nav class="navbar justify-content-center fixed-bottom" id="footer">
+    <div class="footer-copyright">© Copyright 2019 SEG</div>
+</nav>
+
+<script>
+
+  //jQuery to add burger to database and html
+	 $("#addBurger").on("click", function(event) {
+    // Make sure to preventDefault on a submit event.
+    event.preventDefault();
+
+    var newBurger = {
+      burger_name: $("#burgerInput").val().trim(),
+      devoured: false
+    };
+
+    // Send the POST request.
+    $.ajax("/api/burgers", {
+      type: "POST",
+      data: newBurger
+    }).then(
+      function() {
+        // Reload the page to get the updated list
+        location.reload();
+      }
+    );
+  });
+
+  //jQuery to add burger to eaten column
+  $(".devourBurger").on("click", function(event) {
+    var id = $(this).data("burgerid");
+
+    var newDevState = {
+      devoured: 0
+    };
+
+    // Send the PUT request.
+    $.ajax("/api/burgers/" + id, {
+      type: "PUT",
+      data: newDevState
+    }).then(
+      function() {
+        // Reload the page to get the updated list
+        location.reload();
+      }
+    );
+  });
+</script>
