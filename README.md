@@ -11,7 +11,7 @@ This is a restaurant app that lets users input the names of burgers they'd like 
 
 Javascript, Node.js, ExpressJS, Handlebars, MySQL.
 
-[See it in action!]()
+[See it in action!](https://immense-refuge-35002.herokuapp.com/)
 
 ## Copyright
 
