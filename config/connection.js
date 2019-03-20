@@ -11,10 +11,11 @@ require("dotenv").config();
 //     database: "burgers_db"
 //   });
 
+//Settings to connect to clearDB so the app can be deployed to heroku
 var connection = mysql.createConnection({
     host: "us-cdbr-iron-east-03.cleardb.net",
     user: "b735928627ace3",
-    password: "eeba5292",
+    password: process.env.PASSW,
     database: "heroku_6955d38c9d6a5ef"
 })
 
