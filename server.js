@@ -31,8 +31,8 @@ connection.connect(function(err) {
     }
     console.log("Connected as ID " + connection.threadId);
     //Start server 
-app.listen(PORT, function() {
-    console.log("Server listening on: http://localhost:" + PORT);
-})
+    app.listen(PORT, function() {
+        console.log("Server listening on: http://localhost:" + PORT);
+    })
 });
 
