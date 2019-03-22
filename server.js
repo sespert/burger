@@ -1,6 +1,7 @@
 var express = require("express");
 var exphbs = require("express-handlebars");
 var routes = require("./controllers/burgers_controller");
+var connection = require("./config/connection");
 
 var app = express();
 
@@ -21,7 +22,17 @@ app.set("view engine", "handlebars");
 //Use routes
 app.use(routes);
 
-//Start server 
+//We need to connect to the database first and then open the port so when 
+//we call the get method the database is already up
+connection.connect(function(err) {
+    if(err){
+        console.log("Error connecting: " + err.stack);
+        return;
+    }
+    console.log("Connected as ID " + connection.threadId);
+    //Start server 
 app.listen(PORT, function() {
     console.log("Server listening on: http://localhost:" + PORT);
 })
+});
+
