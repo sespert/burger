@@ -7,7 +7,7 @@
             {{#unless devoured}}
             <div class="block">
               <p class="alignm" id="box1">{{this.id}}. {{this.burger_name}}</p>
-              <button data-burgerid="{{this.id}}" class="alignm" id="devourBurger">Devour it!</button>
+              <button data-burgerid="{{this.id}}" class="alignm devourBurger">Devour it!</button>
            </div>
             {{/unless}}
           {{/each}}        
@@ -59,7 +59,7 @@
   });
 
   //jQuery to add burger to eaten column
-  $("#devourBurger").on("click", function(event) {
+  $(".devourBurger").on("click", function(event) {
     var id = $(this).data("burgerid");
 
     var newDevState = {
