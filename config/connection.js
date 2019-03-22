@@ -4,21 +4,14 @@ var mysql = require("mysql");
 require("dotenv").config();
 
 // Set up our connection information
-// var connection = mysql.createConnection({
-//     port: 3306,
-//     host: "localhost",
-//     user: "root",
-//     password: "sher123",
-//     database: "burgers_db"
-//   });
-
-//Settings to connect to clearDB so the app can be deployed to heroku
 var connection = mysql.createConnection({
-    host: "us-cdbr-iron-east-03.cleardb.net",
-    user: "b735928627ace3",
-    password: "eeba5292",
-    database: "heroku_6955d38c9d6a5ef"
-})
+    port: 3306,
+    host: "localhost",
+    user: "root",
+    password: "sher123",
+    database: "burgers_db"
+  });
+
 
 
 //Export connection so ORM can use it
