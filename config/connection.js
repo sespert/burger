@@ -8,7 +8,7 @@ require("dotenv").config();
 var connection = mysql.createConnection({
     host: "us-cdbr-iron-east-03.cleardb.net",
     user: "b735928627ace3",
-    password: process.env.PASSW,
+    password: "eeba5292",
     database: "heroku_6955d38c9d6a5ef"
 })
 
